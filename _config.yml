@@ -1,0 +1,17 @@
+# Site settings
+title: LogKit
+# email:
+description: >
+  An efficient logging library for iOS and OS X, written in Swift. Log to console, file, HTTP service,
+  or your own endpoint. Simple to get started, but smartly customizable.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.logkit.info" # the base hostname & protocol for your site
+permalink: pretty
+# twitter_username: 
+github_username: logkit
+
+# Build settings
+markdown: kramdown
+
+# Custom
+github_org_name: The LogKit Project

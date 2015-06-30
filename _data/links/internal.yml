@@ -1,0 +1,60 @@
+installation:
+    path:               "/docs/1.0/installation/"
+    caption:            "Installation Reference"
+img-embedded1:
+    path:               "/static/images/embedded1.png"
+img-embedded2:
+    path:               "/static/images/embedded2.png"
+img-embedded3:
+    path:               "/static/images/embedded3.png"
+usage:
+    path:               "/docs/1.0/usage/"
+    caption:            "Usage Reference"
+loggers:
+    path:               "/docs/1.0/loggers/"
+    caption:            "Logger Reference"
+log-methods:
+    path:               "/docs/1.0/loggers/#logging-methods"
+    caption:            "Logger Methods"
+endpoints:
+    path:               "/docs/1.0/endpoints/"
+    caption:            "Endpoint Reference"
+ep-console:
+    path:               "/docs/1.0/endpoints/console/"
+    caption:            "Console Endpoint Reference"
+ep-serial-console:
+    path:               "/docs/1.0/endpoints/serial-console/"
+    caption:            "Serial Console Reference"
+ep-file:
+    path:               "/docs/1.0/endpoints/file/"
+    caption:            "File Endpoint Reference"
+ep-dated-file:
+    path:               "/docs/1.0/endpoints/dated-file/"
+    caption:            "Dated File Endpoint Reference"
+ep-http:
+    path:               "/docs/1.0/endpoints/http/"
+    caption:            "HTTP Endpoint Reference"
+ep-http-json:
+    path:               "/docs/1.0/endpoints/http-json/"
+    caption:            "HTTP JSON Endpoint Reference"
+json-formatting:
+    path:               "/docs/1.0/endpoints/http-json/#entry-formatting"
+    caption:            "HTTP JSON Entry Formatting"
+levels:
+    path:               "/docs/1.0/priority-levels/"
+    caption:            "Priority Level Reference"
+formatting:
+    path:               "/docs/1.0/formatting/"
+    caption:            "Formatting Reference"
+default-formatting:
+    path:               "/docs/1.0/formatting/#default-formatters"
+    caption:            "Default Formatters"
+entries:
+    path:               "/docs/1.0/formatting/#log-entries"
+    caption:            "Log Entry Reference"
+custom-formatting:
+    path:               "/docs/1.0/formatting/#writing-formatters"
+    caption:            "Writing Formatters"
+user-info:
+    path:               "/docs/1.0/formatting/#customizing-entry-properties"
+    caption:            "Customizing with userInfo"
