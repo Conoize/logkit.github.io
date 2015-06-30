@@ -7,7 +7,7 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.logkit.info" # the base hostname & protocol for your site
 permalink: pretty
-# twitter_username: 
+# twitter_username:
 github_username: logkit
 
 # Build settings
@@ -15,3 +15,4 @@ markdown: kramdown
 
 # Custom
 github_org_name: The LogKit Project
+github_project_name: logkit

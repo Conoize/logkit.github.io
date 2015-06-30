@@ -105,6 +105,10 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+
+    .contact-title {
+        margin-top: $spacing-unit / 4;
+    }
 }
 
 .footer-col-wrapper {
