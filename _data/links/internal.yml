@@ -1,3 +1,9 @@
+about:
+    path:               "/about/"
+    caption:            "About LogKit"
+docs:
+    path:               "/docs/"
+    caption:            "Documentation"
 installation:
     path:               "/docs/1.0/installation/"
     caption:            "Installation Reference"
