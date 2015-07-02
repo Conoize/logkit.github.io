@@ -18,6 +18,7 @@ There are a few ways to install LogKit. You may choose any one method from those
 [CocoaPods][install-cocoapods] version 0.36 or higher is required. Include LogKit in your Podfile:
 
 {% highlight ruby %}
+use_frameworks!
 pod 'LogKit', '~> 1.0'
 {% endhighlight %}
 
