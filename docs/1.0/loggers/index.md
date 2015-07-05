@@ -59,5 +59,13 @@ A keen observer of the method signatures for each of the above logging methods m
 
 Each of these arguments will default to [special Swift variables][swift-specials] that automatically capture the function name, file name, line number, and column number of the code from which each of your log entries was created. Application developers should omit these arguments from their logging calls, allowing LogKit to correctly capture the scope of each call and save it in the [Log Entry][entries].
 
+### userInfo
+
+Each logging method above comes in two varieties: the standard method, and a method that includes a `userInfo` argument. `userInfo` provides the application developer with an opportunity to customize their logging calls. Any `userInfo` included in a logging call is captured as part of the [Log Entry][entries] and made available to each of the Logger's [Endpoints][endpoints], specifically during [Entry formatting][formatting].
+
+[Endpoints][endpoints] may use `userInfo` in a variety of ways. In one example, a develper could provide one or more additional objects in `userInfo` that an Endpoint can later include in its [Entry Formatter][formatting] for output as part of a log entry. In another example, additional state could be included in `userInfo` that affects control flow during Entry formatting.
+
+See [Customizing Entry Properties][user-info] for examples of using `userInfo` in your logging calls.
+
 
 {% include mdlinks.md %}
