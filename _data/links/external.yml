@@ -25,6 +25,12 @@ nsURLSessionConfig:
 autoclosures:
     path:               "https://developer.apple.com/swift/blog/?id=4"
     caption:            "Swift Autoclosures"
+swift-specials:
+    path:               "https://developer.apple.com/swift/blog/?id=15"
+    caption:            "Swift Special Keywords"
 json:
     path:               "https://en.wikipedia.org/wiki/JSON"
     caption:            "JSON"
+cocoadocs:
+    path:               "http://cocoadocs.org/docsets/LogKit/"
+    caption:            "LogKit Reference"

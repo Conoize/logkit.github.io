@@ -53,5 +53,11 @@ func critical(_ message: String, userInfo: [String: AnyObject])
 
 > Note: Although the `message` argument in the Logger methods above appear to accept Strings, they are actually captured as [autoclosures][autoclosures] for performance reasons. Specifically, message type is `@autoclosure(escaping) message: () -> String`. Developers should treat the `message` argument as a String, but know that their `message` will be resolved lazily, and only if at least one of the Logger's [Endpoints][endpoints] is qualified to accept the log entry.
 
+### Defaults
+
+A keen observer of the method signatures for each of the above logging methods may note that there are additional arguments included in each method (as seen in Xcode or [CocoaDocs][cocoadocs]). These arguments are `functionName`, `filePath`, `lineNumber`, and `columnNumber`. They are not mentioned above because they are meant to be ignored.
+
+Each of these arguments will default to [special Swift variables][swift-specials] that automatically capture the function name, file name, line number, and column number of the code from which each of your log entries was created. Application developers should omit these arguments from their logging calls, allowing LogKit to correctly capture the scope of each call and save it in the [Log Entry][entries].
+
 
 {% include mdlinks.md %}
