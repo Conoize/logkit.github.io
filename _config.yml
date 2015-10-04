@@ -16,3 +16,8 @@ markdown: kramdown
 # Custom
 github_org_name: The LogKit Project
 github_project_name: logkit
+
+# Collections
+collections:
+  releases:
+    output: false
