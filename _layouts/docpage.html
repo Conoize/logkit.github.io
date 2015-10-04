@@ -2,9 +2,8 @@
 layout: default
 ---
 <div class="wrapped-content">
-    {% capture sidebar %}{% include sidebar.md %}{% endcapture %}
     <nav class="sidebar">
-        <h1>Latest</h1>
+        {% capture sidebar %}{% include sidebar.md version=page.family %}{% endcapture %}
         {{ sidebar | markdownify }}
     </nav>
     <div class="post">
