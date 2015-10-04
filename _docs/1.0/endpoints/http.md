@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: HTTP Endpoint
+family: 1.0
 ---
 
 The `LXLogHTTPEndpoint` uploads log entries to a specified URL.
@@ -26,4 +27,4 @@ All other arguments are optional and may be excluded. By default, the [Endpoint]
 Returns an initialized HTTP Endpoint instance.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Dated File Endpoint
+family: 1.0
 ---
 
 The `LXLogDatedFileEndpoint` writes log entries to a specified file. At initialization time, the specified file's name will be prepended with a datestamp.
@@ -36,4 +37,4 @@ All arguments are optional and may be excluded. By default, the [Endpoint][endpo
 Returns an initialized Dated File Endpoint instance if successful, or `nil` if the file cannot be opened.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

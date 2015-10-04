@@ -1,12 +1,21 @@
-* [Installation]({{ site.data.links.internal.installation.path }})
-* [Usage]({{ site.data.links.internal.usage.path }})
-* [Loggers]({{ site.data.links.internal.loggers.path }})
-* [Endpoints]({{ site.data.links.internal.endpoints.path }})
-  * [Console]({{ site.data.links.internal.ep-console.path }})
-  * [Serial Console]({{ site.data.links.internal.ep-serial-console.path }})
-  * [File]({{ site.data.links.internal.ep-file.path }})
-  * [Dated File]({{ site.data.links.internal.ep-dated-file.path }})
-  * [HTTP]({{ site.data.links.internal.ep-http.path }})
-  * [HTTP JSON]({{ site.data.links.internal.ep-http-json.path }})
-* [Priority Levels]({{ site.data.links.internal.levels.path }})
-* [Entry Formatting]({{ site.data.links.internal.formatting.path }})
+# {{ include.version }} Docs
+
+{% case include.version %}
+{% when 1.0 or 1.1 %}
+* [Installation][installation]
+* [Usage][usage]
+* [Loggers][loggers]
+* [Endpoints][endpoints]
+  * [Console][ep-console]
+  * [Serial Console][ep-serial-console]
+  * [File][ep-file]
+  * [Dated File][ep-dated-file]
+  * [HTTP][ep-http]
+  * [HTTP JSON][ep-http-json]
+* [Priority Levels][levels]
+* [Entry Formatting][formatting]
+{% else %}
+
+{% endcase %}
+
+{% include links.md doc_version=include.version %}

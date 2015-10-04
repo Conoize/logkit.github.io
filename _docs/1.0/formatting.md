@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Entry Formatting
+family: 1.0
 ---
 In LogKit, log entries go from `LXLogEntry` to string by using each target [Endpoint][endpoints]'s formatters. Every Endpoint has its own formatters, so different Endpoints can output messages in different formats. For example, an application using both a [Console Endpoint][ep-console] and a [File Endpoint][ep-file] could format an entry in a short, concise way for the console, and a longer, more detailed way for the file.
 
@@ -120,4 +121,4 @@ let myFormatter: LXLogEntryFormatter = { entry in
 > Note: Some Endpoints (such as the included [HTTP JSON Endpoint][ep-http-json]) may automatically attempt to include any `userInfo` provided as a part of their `entryFormatter` output string.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

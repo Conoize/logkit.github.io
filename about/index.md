@@ -30,4 +30,4 @@ Your logging library should not crash your (shipping) application. LogKit was de
 Although LogKit comes with a number of ready-built [Endpoint][endpoints] options, developers may desire to create their own. LogKit provides a protocol that any entity may adopt to become a log Endpoint. Conformance is straightforward with just a few properties and one method. LogKit allows you to send your logs wherever you like!
 
 
-{% include mdlinks.md %}
+{% include links.md %}

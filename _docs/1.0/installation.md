@@ -1,13 +1,12 @@
 ---
 layout: docpage
 title: Installation
+family: 1.0
 ---
 
 > * iOS 7.0 or greater
 > * OS X 10.9 or greater
-> * Xcode 6.3 or greater
->
-> LogKit currently requires Swift 1.2. A Swift 2 version is in the works.
+> * Xcode 6.3 or 6.4 with Swift 1.2
 
 There are a few ways to install LogKit. You may choose any one method from those below. After completing installation, visit the [usage guide][usage] to get started.
 
@@ -61,4 +60,4 @@ Choose the top LogKit for an iOS target, or the bottom LogKit for OS X. You may 
 Add `LogKit.swift` (found in the `Sources` directory) to your project. No other steps are necessary for installation.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

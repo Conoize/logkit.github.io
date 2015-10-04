@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Console Endpoint
+family: 1.0
 ---
 
 The `LXLogConsoleEndpoint` writes log entries to the console (stdout).
@@ -22,4 +23,4 @@ All arguments are optional and may be excluded. By default, the [Endpoint][endpo
 Returns an initialized Console Endpoint instance.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

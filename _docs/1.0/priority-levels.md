@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Priority Levels
+family: 1.0
 ---
 
 LogKit supports a variety of log entry Priority Levels, as defined in the `LXLogLevel` enumeration. The supported Levels are:
@@ -20,4 +21,4 @@ When using a [Logger][loggers], the Level for each log entry will be determined 
 
 > The Levels `All` and `None` are special values for including and excluding all other Levels, respectively. `All` and `None` are not available as [Logger methods][log-methods].
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}
