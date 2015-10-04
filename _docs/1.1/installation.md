@@ -18,7 +18,7 @@ There are a few ways to install LogKit. You may choose any one method from those
 
 {% highlight ruby %}
 use_frameworks!
-pod 'LogKit', '~> 1.0'
+pod 'LogKit', '~> 1.1'
 {% endhighlight %}
 
 For more information on using CocoaPods, read the [guide][cocoapods].
@@ -30,7 +30,7 @@ For more information on using CocoaPods, read the [guide][cocoapods].
 Include LogKit in your Cartfile:
 
 {% highlight text %}
-github "logkit/logkit" >= 1.0
+github "logkit/logkit" >= 1.1
 {% endhighlight %}
 
 For more information on getting started with Carthage, visit the [repo][carthage].
@@ -47,9 +47,9 @@ Select your main project's target, and add LogKit as an Embedded Binary in the G
 
 ![Embedded Installation Image 2][img-embedded2]
 
-Choose the top LogKit for an iOS target, or the bottom LogKit for OS X. You may choose from either grouping.
+Choose the top LogKit for an OS X target, or the bottom LogKit for iOS. You may choose from either grouping.
 
-![Embedded Installation Image 3][img-embedded3]
+![Embedded Installation Image 3][img-embedded3_1]
 
 ### Source
 

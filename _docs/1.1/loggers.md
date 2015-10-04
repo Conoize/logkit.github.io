@@ -17,7 +17,7 @@ Also see the [Endpoints][endpoints] documentation for information regarding the 
 `LXLogger` contains the following initializers:
 
 {% highlight swift %}
-init(endpoints: [LXLogEndpoint?])
+init(endpoints: [LXEndpoint?])
 {% endhighlight %}
 
 Returns an initialized and ready Logger instance populated with each of the provided [Endpoints][endpoints]. Any Endpoints that fail initialization are discarded immediately.

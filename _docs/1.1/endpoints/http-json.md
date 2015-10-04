@@ -4,7 +4,7 @@ title: HTTP JSON Endpoint
 family: 1.1
 ---
 
-The `LXLogHTTPJSONEndpoint` uploads log entries to a specified URL. The entries are serialized in [JSON format][json].
+The `LXHTTPJSONEndpoint` uploads log entries to a specified URL. The entries are serialized in [JSON format][json].
 
 The HTTP JSON Endpoint is safe to be used in environments featuring concurrency. This [Endpoint][endpoints] does some of its work asynchronously to allow better logging performance. Upload and retry management are also handled asynchronously. Log entries that do not successfully upload will be queued for another upload attempt later. Because network performance is very unpredictable, log entries are not guaranteed to be delivered in the order in which they were generated.
 
@@ -18,10 +18,10 @@ It is the application developer's duty to ensure that all [`userInfo`][entries] 
 
 ### Initialization
 
-The following initializers are available for `LXLogHTTPJSONEndpoint`:
+The following initializers are available for `LXHTTPJSONEndpoint`:
 
 {% highlight swift %}
-init(URL: NSURL, HTTPMethod: String, successCodes: Set<Int> = Set([200, 201, 202, 204]), sessionConfiguration: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration(), minimumLogLevel: LXLogLevel = .All, dateFormatter: NSDateFormatter = defaultDateFormatter)
+init(URL: NSURL, HTTPMethod: String, successCodes: Set<Int> = Set([200, 201, 202, 204]), sessionConfiguration: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration(), minimumLogLevel: LXPriorityLevel = .All, dateFormatter: NSDateFormatter = defaultDateFormatter)
 {% endhighlight %}
 
 LogKit will upload log entries to the specified `URL` using the specified `HTTPMethod`.

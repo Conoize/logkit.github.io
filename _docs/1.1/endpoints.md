@@ -23,20 +23,20 @@ Each of these included Endpoint types has unique settings and characteristics. V
 
 ## Creating a Custom Endpoint
 
-If the included Endpoint types do not meet your needs, LogKit makes it easy to create a custom Endpoint for use within your application. Simply define an object that conforms to LogKit's `LXLogEndpoint` protocol, and include it when initializing your [Logger][loggers].
+If the included Endpoint types do not meet your needs, LogKit makes it easy to create a custom Endpoint for use within your application. Simply define an object that conforms to LogKit's `LXEndpoint` protocol, and include it when initializing your [Logger][loggers].
 
 ### Anatomy of an Endpoint
 
-An Endpoint can be any object that conforms to the `LXLogEndpoint` protocol.  The protocol defines a few properties that control which [Log Entries][entries] the Endpoint accepts and how the Entries are [formatted][formatting], as well as a method for writing Log Entries to the destination the Endpoint represents. A [Logger][loggers] instance can include several Endpoints, and each Endpoint can be configured independently.
+An Endpoint can be any object that conforms to the `LXEndpoint` protocol.  The protocol defines a few properties that control which [Log Entries][entries] the Endpoint accepts and how the Entries are [formatted][formatting], as well as a method for writing Log Entries to the destination the Endpoint represents. A [Logger][loggers] instance can include several Endpoints, and each Endpoint can be configured independently.
 
 #### The Endpoint Protocol
 
-The `LXLogEndpoint` protocol defines the following required properties and methods:
+The `LXEndpoint` protocol defines the following required properties and methods:
 
 {% highlight swift %}
-minimumLogLevel: LXLogLevel
+minimumLogLevel: LXPriorityLevel
 dateFormatter: NSDateFormatter
-entryFormatter: LXLogEntryFormatter
+entryFormatter: LXEntryFormatter
 
 write(entryString: String) -> Void
 {% endhighlight %}

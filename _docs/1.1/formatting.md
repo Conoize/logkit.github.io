@@ -14,7 +14,7 @@ Property        | Type                 | Description
 --------------- | -------------------- | ------------------------------------------------------------------------------
 `message`       | `String`             | The log message
 `userInfo`      | `[String:AnyObject]` | Additional values to be provided to the entry formatter; always present but may be empty; see [here](#customizing-entry-properties) for using userInfo
-`logLevel`      | `String`             | The name of the log entry's [Priority Level][levels]
+`level`         | `String`             | The name of the log entry's [Priority Level][levels]
 `timestamp`     | `Double`             | The number of seconds since the [Unix epoch][epoch]
 `dateTime`      | `String`             | The timestamp formatted by an Endpoint's `dateFormatter`
 `functionName`  | `String`             | The name of the function from which the log entry was created
@@ -27,7 +27,7 @@ Property        | Type                 | Description
 `isMainThread`  | `Bool`               | An indicator of whether the log entry was created on the main thread
 `logKitVersion` | `String`             | The version of the LogKit framework that generated the entry
 
-Each of these properties will be available in every `LXLogEntry` that is passed to an [Endpoint][endpoints]'s `entryFormatter`. The developer may choose to use or ignore each property when crafting a custom `LXLogEntryFormatter`.
+Each of these properties will be available in every `LXLogEntry` that is passed to an [Endpoint][endpoints]'s `entryFormatter`. The developer may choose to use or ignore each property when crafting a custom `LXEntryFormatter`.
 
 ## Default Formatters
 LogKit will supply the following default formatters if no formatter is specified during [Endpoint][endpoints] initialization (unless a specific Endpoint is documented otherwise):
@@ -61,24 +61,24 @@ Date formatters are of the type `NSDateFormatter` and are [documented by Apple h
 > Although LogKit captures timestamps with microsecond precision, `NSDateFormatter` always rounds to the nearest millisecond. If your application requires microsecond precision, you should customize your Endpoint's `entryFormatter` to display each entry's `timestamp` property, which retains microsecond precision.
 
 ### Entry Formatters
-Entry formatters are closures of the type `LXLogEntryFormatter`, defined as:
+Entry formatters are closures of the type `LXEntryFormatter`, defined as:
 
 {% highlight swift %}
-typealias LXLogEntryFormatter = (entry: LXLogEntry) -> String
+typealias LXEntryFormatter = (entry: LXLogEntry) -> String
 {% endhighlight %}
 
-Defining an entry formatter is as simple as supplying a closure that accepts an entry and returns a string. `LXLogEntryFormatter`s receive an `LXLogEntry` and have the option to include any of its properties within the string the formatter returns.
+Defining an entry formatter is as simple as supplying a closure that accepts an entry and returns a string. `LXEntryFormatter`s receive an `LXLogEntry` and have the option to include any of its properties within the string the formatter returns.
 
 Here are a couple examples of custom entry formatters:
 
 {% highlight swift %}
 // A short, concise formatter:
-let shortFormatter: LXLogEntryFormatter = { entry in
+let shortFormatter: LXEntryFormatter = { entry in
     return "\(entry.dateTime) [\(entry.logLevel.uppercaseString)] \(entry.message)"
 }
 
 // A long, detailed formatter:
-let longFormatter: LXLogEntryFormatter = { entry in
+let longFormatter: LXEntryFormatter = { entry in
     return "\(entry.dateTime) (\(entry.timestamp)) [\(entry.logLevel.uppercaseString)] {thread: \(entry.threadID) '\(entry.threadName)' main: \(entry.isMainThread)} \(entry.functionName) <\(entry.fileName):\(entry.lineNumber).\(entry.columnNumber)> \(entry.message)"
 }
 {% endhighlight %}
@@ -98,7 +98,7 @@ Including data in `userData` can be useful in a few ways.
 * The developer can supply additional properties to be included in a formatter's string output.
 
 {% highlight swift %}
-let myFormatter: LXLogEntryFormatter = { entry in
+let myFormatter: LXEntryFormatter = { entry in
     let year = entry.userInfo["year"] as? String ?? "unknown"
     return "\(entry.message) The year is \(year)."
 }
@@ -109,7 +109,7 @@ let myFormatter: LXLogEntryFormatter = { entry in
 * The developer can supply data intended to control a formatter's string output.
 
 {% highlight swift %}
-let myFormatter: LXLogEntryFormatter = { entry in
+let myFormatter: LXEntryFormatter = { entry in
     if let year = entry.userInfo["year"] as? String where year == "2015" {
         return "\(entry.message)"
     } else {

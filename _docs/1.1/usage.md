@@ -14,7 +14,7 @@ LogKit makes it easy to get started logging!
 
 > Note: If you installed LogKit by including its source directly within your project, there is no need to `import LogKit` (in fact, you will not be able to). Skip that step and just create a Logger.
 
-To get started right away, install LogKit and follow the Simple Example code below. Later, you may add more [Endpoints][endpoints] by simply modifying your [Logger's][loggers] initialization. All of your logging calls will begin outputting to the new Endpoints!
+To get started right away, install LogKit and follow the Simple Example code below. Later, you can add more [Endpoints][endpoints] by simply modifying your [Logger's][loggers] initialization. All of your logging calls will begin outputting to the new Endpoints!
 
 ### Simple Example (in iOS)
 
@@ -57,7 +57,7 @@ import LogKit
 
 let log = LXLogger(endpoints: [
 
-    LXLogSerialConsoleEndpoint(
+    LXSerialConsoleEndpoint(
         dateFormatter: {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "HH':'mm':'ss'.'SSS"
@@ -69,7 +69,7 @@ let log = LXLogger(endpoints: [
         }
     ),
 
-    LXLogFileEndpoint(
+    LXFileEndpoint(
         fileURL: (NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask) as? [NSURL])?.first?
             .URLByAppendingPathComponent("logs", isDirectory: true)
             .URLByAppendingPathComponent("log.txt"),

@@ -4,7 +4,7 @@ title: Priority Levels
 family: 1.1
 ---
 
-LogKit supports a variety of log entry Priority Levels, as defined in the `LXLogLevel` enumeration. The supported Levels are:
+LogKit supports a variety of log entry Priority Levels, as defined in the `LXPriorityLevel` enumeration. The supported Levels are:
 
 Level      | Priority | Suggested Use
 ---------- | -------- | ------------------------------------------------------------------------
