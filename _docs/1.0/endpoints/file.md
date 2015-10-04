@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: File Endpoint
+family: 1.0
 ---
 
 The `LXLogFileEndpoint` writes log entries to a specified file.
@@ -36,4 +37,4 @@ All arguments are optional and may be excluded. By default, the [Endpoint][endpo
 Returns an initialized File Endpoint instance if successful, or `nil` if the file cannot be opened.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Serial Console Endpoint
+family: 1.0
 ---
 
 The `LXLogSerialConsoleEndpoint` writes log entries to the console (stdout) on a first-in-first-out basis.
@@ -24,4 +25,4 @@ All arguments are optional and may be excluded. By default, the [Endpoint][endpo
 Returns an initialized Serial Console Endpoint instance.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

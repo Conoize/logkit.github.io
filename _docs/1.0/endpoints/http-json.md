@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: HTTP JSON Endpoint
+family: 1.0
 ---
 
 The `LXLogHTTPJSONEndpoint` uploads log entries to a specified URL. The entries are serialized in [JSON format][json].
@@ -32,4 +33,4 @@ All other arguments are optional and may be excluded. By default, the [Endpoint]
 Returns an initialized HTTP JSON Endpoint instance. This Endpoint uses a specialized `entryFormatter` [described above][json-formatting].
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

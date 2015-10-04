@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Endpoints
+family: 1.0
 ---
 
 Endpoints are responsible for processing and writing [Log Entries][entries] to the destinations they represent. LogKit includes several ready-made Endpoints for various logging needs, but application developers can also create their own.
@@ -46,4 +47,4 @@ write(entryString: String) -> Void
 
 When a [Log Entry][entries] meets an Endpoint's [Priority Level][levels] requirements and has been formatted as a string by the Endpoints formatters, that string is passed the the Endpoint's `write:` method for output to a final destination. In your `write:` method, you should print the `entryString` to the console, append it to a log file, or send it to whatever destination your Endpoint represents.
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

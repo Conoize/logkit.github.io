@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Usage
+family: 1.0
 ---
 
 ## Quick Start
@@ -101,4 +102,4 @@ This complex example initializes a [Logger][loggers] with several [Endpoints][en
 These are just two of several Endpoints that LogKit includes. See the [Endpoints documentation][endpoints] for other Endpoints that LogKit includes, and for information on creating your own Endpoints.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}

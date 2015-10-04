@@ -1,6 +1,7 @@
 ---
 layout: docpage
 title: Loggers
+family: 1.0
 ---
 
 A Logger instance is the primary way in which an application developer interacts with LogKit. This instance is responsible for receiving log entries and distributing them to its [Endpoints][endpoints]. Generally, a Logger instance is created once, at application load time, and used throughout the life of the application. LogKit includes the `LXLogger` class which fulfills this function, and is not meant to be subclassed.
@@ -68,4 +69,4 @@ Each logging method above comes in two varieties: the standard method, and a met
 See [Customizing Entry Properties][user-info] for examples of using `userInfo` in your logging calls.
 
 
-{% include mdlinks.md %}
+{% include links.md doc_version=page.family %}
