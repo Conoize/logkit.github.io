@@ -65,7 +65,7 @@ let log = LXLogger(endpoints: [
             return dateFormatter
         }(),
         entryFormatter: { entry in
-            return "\(entry.dateTime) [\(entry.logLevel.uppercaseString)] \(entry.message)"
+            return "\(entry.dateTime) [\(entry.level.uppercaseString)] \(entry.message)"
         }
     ),
 
@@ -75,7 +75,7 @@ let log = LXLogger(endpoints: [
             .URLByAppendingPathComponent("log.txt"),
         minimumLogLevel: .Notice,
         entryFormatter: { entry in
-            return "\(entry.dateTime) (\(entry.timestamp)) [\(entry.logLevel.uppercaseString)] {thread: \(entry.threadID) '\(entry.threadName)' main: \(entry.isMainThread)} \(entry.functionName) <\(entry.fileName):\(entry.lineNumber).\(entry.columnNumber)> \(entry.message)"
+            return "\(entry.dateTime) (\(entry.timestamp)) [\(entry.level.uppercaseString)] {thread: \(entry.threadID) '\(entry.threadName)' main: \(entry.isMainThread)} \(entry.functionName) <\(entry.fileName):\(entry.lineNumber).\(entry.columnNumber)> \(entry.message)"
         }
     ),
 

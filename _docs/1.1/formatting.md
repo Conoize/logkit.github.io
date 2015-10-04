@@ -74,12 +74,12 @@ Here are a couple examples of custom entry formatters:
 {% highlight swift %}
 // A short, concise formatter:
 let shortFormatter: LXEntryFormatter = { entry in
-    return "\(entry.dateTime) [\(entry.logLevel.uppercaseString)] \(entry.message)"
+    return "\(entry.dateTime) [\(entry.level.uppercaseString)] \(entry.message)"
 }
 
 // A long, detailed formatter:
 let longFormatter: LXEntryFormatter = { entry in
-    return "\(entry.dateTime) (\(entry.timestamp)) [\(entry.logLevel.uppercaseString)] {thread: \(entry.threadID) '\(entry.threadName)' main: \(entry.isMainThread)} \(entry.functionName) <\(entry.fileName):\(entry.lineNumber).\(entry.columnNumber)> \(entry.message)"
+    return "\(entry.dateTime) (\(entry.timestamp)) [\(entry.level.uppercaseString)] {thread: \(entry.threadID) '\(entry.threadName)' main: \(entry.isMainThread)} \(entry.functionName) <\(entry.fileName):\(entry.lineNumber).\(entry.columnNumber)> \(entry.message)"
 }
 {% endhighlight %}
 
