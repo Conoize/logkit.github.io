@@ -18,4 +18,4 @@ There is room to grow. This is a first release. Swift 2 is coming in a few month
 For more about the project, see LogKit's [about page][about], or check out the [documentation][docs] to get started.
 
 
- {% include mdlinks.md %}
+ {% include links.md doc_version=1.0 %}
