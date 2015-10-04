@@ -15,11 +15,16 @@
 
       <div class="trigger">
         {% assign pages = site.pages | sort: "title" %}
+{% comment %}
         {% for page in pages %}
           {% if page.layout == 'page' and page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
+{% endcomment %}
+        <a class="page-link" href="/about/">About</a>
+        <a class="page-link" href="/docs/{{ site.releases.last.family }}/">Documentation</a>
+        <a class="page-link" href="/releases/">Releases</a>
       </div>
     </nav>
 
