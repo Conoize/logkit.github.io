@@ -28,12 +28,12 @@
 [levels]:                   {{ levels }}                                    "Priority Level Reference"
 [formatting]:               {{ formatting }}                                "Formatting Reference"
 
-[log-methods]:              {{ loggers }}#logging-methods                   "Logger Methods"
-[json-formatting]:          {{ ep_http_json }}#entry-formatting             "HTTP JSON Entry Formatting"
-[default-formatting]:       {{ formatting }}#default-formatters             "Default Formatters"
-[entries]:                  {{ formatting }}#log-entries                    "Log Entry Reference"
-[custom-formatting]:        {{ formatting }}#writing-formatters             "Writing Formatters"
-[user-info]:                {{ formatting }}#customizing-entry-properties   "Customizing with userInfo"
+[log-methods]:              {{ loggers | remove:' ' }}#logging-methods                   "Logger Methods"
+[json-formatting]:          {{ ep_http_json | remove:' ' }}#entry-formatting             "HTTP JSON Entry Formatting"
+[default-formatting]:       {{ formatting | remove:' ' }}#default-formatters             "Default Formatters"
+[entries]:                  {{ formatting | remove:' ' }}#log-entries                    "Log Entry Reference"
+[custom-formatting]:        {{ formatting | remove:' ' }}#writing-formatters             "Writing Formatters"
+[user-info]:                {{ formatting | remove:' ' }}#customizing-entry-properties   "Customizing with userInfo"
 
 [about]:                    /about/                                         "About LogKit"
 [docs]:                     {{ doc_path }}                                  "Documentation"
