@@ -56,4 +56,5 @@
 [autoclosures]: https://developer.apple.com/swift/blog/?id=4 "Swift Autoclosures"
 [swift-specials]: https://developer.apple.com/swift/blog/?id=15 "Swift Special Keywords"
 [json]: https://en.wikipedia.org/wiki/JSON "JSON"
-[cocoadocs]: http://cocoadocs.org/docsets/LogKit/ "LogKit Reference"
+[cocoadocs_1_0]: http://cocoadocs.org/docsets/LogKit/1.0.4/ "LogKit Reference"
+[cocoadocs_1_1]: http://cocoadocs.org/docsets/LogKit/1.1.0/ "LogKit Reference"
