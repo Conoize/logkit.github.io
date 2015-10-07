@@ -21,6 +21,7 @@
 {% capture levels %}                {{ doc_path }}priority-levels/                                  {% endcapture %}
 {% capture formatting %}            {{ doc_path }}formatting/                                       {% endcapture %}
 
+{% comment %} === Versioned Documentation Links === {% endcomment %}
 [installation]:             {{ installation }}                              "Installation Reference"
 [usage]:                    {{ usage }}                                     "Usage Reference"
 [loggers]:                  {{ loggers }}                                   "Logger Reference"
@@ -35,6 +36,7 @@
 [levels]:                   {{ levels }}                                    "Priority Level Reference"
 [formatting]:               {{ formatting }}                                "Formatting Reference"
 
+{% comment %} === Documentation Anchor Links === {% endcomment %}
 [log-methods]:              {{ loggers | remove:' ' }}#logging-methods                   "Logger Methods"
 [json-formatting]:          {{ ep_http_json | remove:' ' }}#entry-formatting             "HTTP JSON Entry Formatting"
 [default-formatting]:       {{ formatting | remove:' ' }}#default-formatters             "Default Formatters"
@@ -42,21 +44,32 @@
 [custom-formatting]:        {{ formatting | remove:' ' }}#writing-formatters             "Writing Formatters"
 [user-info]:                {{ formatting | remove:' ' }}#customizing-entry-properties   "Customizing with userInfo"
 
+{% comment %} === Main Page Links === {% endcomment %}
 [about]:                    /about/                                         "About LogKit"
 [releases]:                 /releases/                                      "Releases"
 [docs]:                     {{ doc_path }}                                  "Documentation"
+
+
+{% comment %} === Dynamic Internal Links === {% endcomment %}
 {% for release in site.releases %}
 [docs-{{ release.family | replace:".","_" }}]: {{ release.docs_path }}      "LogKit {{ release.family }} Documentation"
 {% endfor %}
-[download]:                 {{ download }}                                  "LogKit {{ family }} Download"
 
+
+{% comment %} === Static Files === {% endcomment %}
 [img-installation1]:        {{ static_images_path }}installation1.png
 [img-installation2]:        {{ static_images_path }}installation2.png
 [img-installation3]:        {{ static_images_path }}installation3.png
 [img-installation3v2]:      {{ static_images_path }}installation3v2.png
+[img-installation3v3]:      {{ static_images_path }}installation3v3.png
+
+
+{% comment %} === Dynamic External Links === {% endcomment %}
+[download]:                 {{ download }}                                  "LogKit {{ family }}"
 [cocoadocs]:                {{ site.releases | where:'family',family | map:'cocoadocs_link' }}      "LogKit at CocoaDocs"
 
 
+{% comment %} === Static External Links === {% endcomment %}
 [install-cocoapods]: https://guides.cocoapods.org/using/getting-started.html "Getting Started with CocoaPods"
 [cocoapods]: https://guides.cocoapods.org/using/using-cocoapods.html "Using CocoaPods"
 [carthage]: https://github.com/Carthage/Carthage "Carthage Project"
