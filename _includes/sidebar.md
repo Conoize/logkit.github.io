@@ -33,6 +33,7 @@
 
 ***
 
+* [ChangeLog][changelog]
 * [CocoaDocs][cocoadocs]
 
 

@@ -65,6 +65,7 @@
 
 {% comment %} === Dynamic External Links === {% endcomment %}
 [gh-release]:               {{ site.releases | where:'family',family | map:'download_link' }}   "LogKit {{ family }} Release"
+[changelog]:                {{ site.releases | where:'family',family | map:'changelog_link' }}  "LogKit {{ family }} ChangeLog"
 [cocoadocs]:                {{ site.releases | where:'family',family | map:'cocoadocs_link' }}  "LogKit at CocoaDocs"
 
 
