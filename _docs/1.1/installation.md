@@ -41,7 +41,7 @@ For more information on getting started with Carthage, visit the [repo][carthage
 
 > Supports iOS 8+, OS X 10.9+
 
-[Download LogKit][download]. Include `LogKit.xcodeproj` within your project (second level, below your project root, as a sub-project). The LogKit project icon should be indented slightly to the right relative to your main project's icon.
+[Download LogKit][gh-release]. Include `LogKit.xcodeproj` within your project (second level, below your project root, as a sub-project). The LogKit project icon should be indented slightly to the right relative to your main project's icon.
 
 ![Embedded Installation Image 1][img-installation1]
 
@@ -59,7 +59,7 @@ Choose the top LogKit for an OS X target, or the bottom LogKit for iOS. You may 
 >
 > Integrating the LogKit source file is the only way to include LogKit in projects targeting iOS 7. When this installation method is used, skip the `import LogKit`.
 
-[Download LogKit][download]. Add `LogKit.swift` (found in the `Sources` directory) to your project. No other steps are necessary for installation.
+[Download LogKit][gh-release]. Add `LogKit.swift` (found in the `Sources` directory) to your project. No other steps are necessary for installation.
 
 
 {% include links.md doc_version=page.family %}

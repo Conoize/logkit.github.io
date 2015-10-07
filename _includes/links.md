@@ -5,7 +5,6 @@
 {% endif %}
 {% capture doc_path %}/docs/{{ family }}/{% endcapture %}
 {% assign static_images_path = '/static/images/' %}
-{% assign download = (site.releases | where:'family',family | map:'download_link') %}
 
 {% capture installation %}          {{ doc_path }}installation/                                     {% endcapture %}
 {% capture usage %}                 {{ doc_path }}usage/                                            {% endcapture %}
@@ -65,8 +64,8 @@
 
 
 {% comment %} === Dynamic External Links === {% endcomment %}
-[download]:                 {{ download }}                                  "LogKit {{ family }}"
-[cocoadocs]:                {{ site.releases | where:'family',family | map:'cocoadocs_link' }}      "LogKit at CocoaDocs"
+[gh-release]:               {{ site.releases | where:'family',family | map:'download_link' }}   "LogKit {{ family }} Release"
+[cocoadocs]:                {{ site.releases | where:'family',family | map:'cocoadocs_link' }}  "LogKit at CocoaDocs"
 
 
 {% comment %} === Static External Links === {% endcomment %}
