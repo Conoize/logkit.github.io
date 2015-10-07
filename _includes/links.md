@@ -37,8 +37,11 @@
 [user-info]:                {{ formatting | remove:' ' }}#customizing-entry-properties   "Customizing with userInfo"
 
 [about]:                    /about/                                         "About LogKit"
-[docs]:                     {{ doc_path }}                                  "Documentation"
 [releases]:                 /releases/                                      "Releases"
+[docs]:                     {{ doc_path }}                                  "Documentation"
+{% for release in site.releases %}
+[docs-{{ release.family | replace:".","_" }}]: {{ release.docs_path }}      "LogKit {{ release.family }} Documentation"
+{% endfor %}
 
 [img-installation1]:        {{ static_images_path }}installation1.png
 [img-installation2]:        {{ static_images_path }}installation2.png
