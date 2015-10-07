@@ -1,5 +1,11 @@
-{% capture doc_path %}/docs/{% if include.doc_version %}{{ include.doc_version }}{% else %}{{ site.releases.last.family }}{% endif %}/{% endcapture %}
-{% capture static_images_path %}/static/images/{% endcapture %}
+{% if include.doc_version %}
+    {% assign family = include.doc_version %}
+{% else %}
+    {% assign family = site.releases.last.family %}
+{% endif %}
+{% capture doc_path %}/docs/{{ family }}/{% endcapture %}
+{% assign static_images_path = '/static/images/' %}
+{% assign download = (site.releases | where:'family',family | map:'download_link') %}
 
 {% capture installation %}          {{ doc_path }}installation/                                     {% endcapture %}
 {% capture usage %}                 {{ doc_path }}usage/                                            {% endcapture %}
@@ -42,6 +48,7 @@
 {% for release in site.releases %}
 [docs-{{ release.family | replace:".","_" }}]: {{ release.docs_path }}      "LogKit {{ release.family }} Documentation"
 {% endfor %}
+[download]:                 {{ download }}                                  "LogKit {{ family }} Download"
 
 [img-installation1]:        {{ static_images_path }}installation1.png
 [img-installation2]:        {{ static_images_path }}installation2.png
