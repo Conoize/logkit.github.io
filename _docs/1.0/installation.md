@@ -41,15 +41,15 @@ For more information on getting started with Carthage, visit the [repo][carthage
 
 Include `LogKit.xcodeproj` within your project (second level, below your project root, as a sub-project). The LogKit project icon should be indented slightly to the right relative to your main project's icon.
 
-![Embedded Installation Image 1][img-embedded1]
+![Embedded Installation Image 1][img-installation1]
 
 Select your main project's target, and add LogKit as an Embedded Binary in the General tab.
 
-![Embedded Installation Image 2][img-embedded2]
+![Embedded Installation Image 2][img-installation2]
 
 Choose the top LogKit for an iOS target, or the bottom LogKit for OS X. You may choose from either grouping.
 
-![Embedded Installation Image 3][img-embedded3]
+![Embedded Installation Image 3][img-installation3]
 
 ### Source
 

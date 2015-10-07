@@ -40,10 +40,10 @@
 [docs]:                     {{ doc_path }}                                  "Documentation"
 [releases]:                 /releases/                                      "Releases"
 
-[img-embedded1]:            {{ static_images_path }}embedded1.png
-[img-embedded2]:            {{ static_images_path }}embedded2.png
-[img-embedded3]:            {{ static_images_path }}embedded3.png
-[img-embedded3_1]:          {{ static_images_path }}embedded3_1.png
+[img-installation1]:        {{ static_images_path }}installation1.png
+[img-installation2]:        {{ static_images_path }}installation2.png
+[img-installation3]:        {{ static_images_path }}installation3.png
+[img-installation3v2]:      {{ static_images_path }}installation3v2.png
 
 
 [install-cocoapods]: https://guides.cocoapods.org/using/getting-started.html "Getting Started with CocoaPods"
