@@ -22,6 +22,7 @@
 [ep-console]:               {{ ep_console }}                                "Console Endpoint Reference"
 [ep-serial-console]:        {{ ep_serial_console }}                         "Serial Console Reference"
 [ep-file]:                  {{ ep_file }}                                   "File Endpoint Reference"
+[ep-rotating-file]:         {{ ep_rotating_file }}                          "Rotating File Endpoint Reference"
 [ep-dated-file]:            {{ ep_dated_file }}                             "Dated File Endpoint Reference"
 [ep-http]:                  {{ ep_http }}                                   "HTTP Endpoint Reference"
 [ep-http-json]:             {{ ep_http_json }}                              "HTTP JSON Endpoint Reference"
