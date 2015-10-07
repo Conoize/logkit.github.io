@@ -54,6 +54,7 @@
 [img-installation2]:        {{ static_images_path }}installation2.png
 [img-installation3]:        {{ static_images_path }}installation3.png
 [img-installation3v2]:      {{ static_images_path }}installation3v2.png
+[cocoadocs]:                {{ site.releases | where:'family',family | map:'cocoadocs_link' }}      "LogKit at CocoaDocs"
 
 
 [install-cocoapods]: https://guides.cocoapods.org/using/getting-started.html "Getting Started with CocoaPods"
@@ -67,6 +68,4 @@
 [autoclosures]: https://developer.apple.com/swift/blog/?id=4 "Swift Autoclosures"
 [swift-specials]: https://developer.apple.com/swift/blog/?id=15 "Swift Special Keywords"
 [json]: https://en.wikipedia.org/wiki/JSON "JSON"
-[cocoadocs_1_0]: http://cocoadocs.org/docsets/LogKit/1.0.4/ "LogKit Reference"
-[cocoadocs_1_1]: http://cocoadocs.org/docsets/LogKit/1.1.0/ "LogKit Reference"
-[cocoadocs_2_0]: http://cocoadocs.org/docsets/LogKit/2.0.0/ "LogKit Reference"
+[cocoadocs-latest]: http://cocoadocs.org/docsets/LogKit "LogKit Reference"
