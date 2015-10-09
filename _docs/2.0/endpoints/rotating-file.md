@@ -4,9 +4,9 @@ title: Rotating File Endpoint
 family: 2.0
 ---
 
-{% include docs/endpoints/rotating-file/overview_2.md %}
+{% include docs/endpoints/rotating-file/overview.md family=page.family %}
 
-{% include docs/endpoints/synchronicity_2.md endpoint_type="Rotating File" %}
+{% include docs/endpoints/synchronicity.md family=page.family endpoint_type="Rotating File" %}
 
 ## Usage
 
@@ -25,9 +25,7 @@ Name                   | Type               | Description | Default
 `baseURL`              | `NSURL?`           | The URL used to build the rotating file set's file URLs; see description below | see below
 `numberOfFiles`        | `UInt`             | The number of files to be used in the rotation | `5`
 `maxFileSizeKiB`       | `UInt`             | The maximum file size of each file in the rotation, specified in kilobytes | `1024`
-`minimumPriorityLevel` | `LXPriorityLevel`  | The minimum Priority Level an Entry must be to be accepted by this Endpoint | `All`
-`dateFormatter`        | `LXDateFormatter`  | The formatter to be used to convert an Entry's `dateTime` to a string | `.standardFormatter()`
-`entryFormatter`       | `LXEntryFormatter` | The formatter to be used to convert each Entry to a string | `.standardFormatter()`
+{% include docs/endpoints/common_params.md family=page.family %}
 
 LogKit will write log entries to the files specified by `baseURL`, with each file's name automatically prepended with an index number indicating its place in the rotation. If the specified file cannot be opened, or if the index-prepended URL evaluates to `nil`, the initializer will fail.
 
