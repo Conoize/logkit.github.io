@@ -7,6 +7,7 @@
 {% assign static_images_path = '/static/images/' %}
 
 {% capture installation %}          {{ doc_path }}installation/                                     {% endcapture %}
+{% capture migration %}             {{ doc_path }}migration/                                        {% endcapture %}
 {% capture usage %}                 {{ doc_path }}usage/                                            {% endcapture %}
 {% capture loggers %}               {{ doc_path }}loggers/                                          {% endcapture %}
 {% capture endpoints %}             {{ doc_path }}endpoints/                                        {% endcapture %}
@@ -22,6 +23,7 @@
 
 {% comment %} === Versioned Documentation Links === {% endcomment %}
 [installation]:             {{ installation }}                              "Installation Reference"
+[migration]:                {{ migration }}                                 "Migration Reference"
 [usage]:                    {{ usage }}                                     "Usage Reference"
 [loggers]:                  {{ loggers }}                                   "Logger Reference"
 [endpoints]:                {{ endpoints }}                                 "Endpoint Reference"
