@@ -29,7 +29,7 @@ Name                   | Type               | Description | Default
 
 LogKit will write log entries to the files specified by `baseURL`, with each file's name automatically prepended with an index number indicating its place in the rotation. If the specified file cannot be opened, or if the index-prepended URL evaluates to `nil`, the initializer will fail.
 
-If omitted, the URL defaults to `{AppSupport}/{bundleID}/logs/{number}_log.txt`.
+If omitted, the URL defaults to `{AppSupport}/{bundleID}/logs/{number}_log.txt`, where `{AppSupport}` is the system-determined Application Support directory, `{bundleID}` is the host application's `bundleIdentifier` string, and `{number}` is the index of the currently selected file.
 
 As an example, if an `LXRotatingFileEndpoint` is initialized with its default parameter values, it will create a set of files in `Application Support/{bundleID}/logs/` named `1_log.txt`, `2_log.txt`, `3_log.txt`, `4_log.txt`, and `5_log.txt`.
 
