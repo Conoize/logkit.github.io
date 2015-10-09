@@ -15,22 +15,27 @@ family: 2.0
 The following initializers are available for `LXRotatingFileEndpoint`:
 
 {% highlight swift %}
-init?(baseURL: NSURL?, numberOfFiles: UInt = 5, maxFileSizeKiB: UInt = 1024, minimumPriorityLevel: LXPriorityLevel = .All, dateFormatter: NSDateFormatter = LXDateFormatter.standardFormatter(), entryFormatter: LXEntryFormatter = LXEntryFormatter.standardFormatter())
+init?(baseURL: numberOfFiles: maxFileSizeKiB: minimumPriorityLevel: dateFormatter: entryFormatter: )
 {% endhighlight %}
 
-LogKit will write log entries to the file specified by `baseURL`, with the file's name automatically prepended with an index number indicating its place in the rotation. If omitted, the URL defaults to `{AppSupport}/{bundleID}/logs/{number}_log.txt`. If the specified file cannot be opened, or if the index-prepended URL evaluates to `nil`, the initializer will fail.
+**Parameters**
 
-The number of files to be used in the rotation is specified by `numberOfFiles`, and defaults to `5` if omitted.
+Name                   | Type               | Description | Default
+---------------------- | ------------------ | ----------- | --------
+`baseURL`              | `NSURL?`           | The URL used to build the rotating file set's file URLs; see description below | see below
+`numberOfFiles`        | `UInt`             | The number of files to be used in the rotation | `5`
+`maxFileSizeKiB`       | `UInt`             | The maximum file size of each file in the rotation, specified in kilobytes | `1024`
+`minimumPriorityLevel` | `LXPriorityLevel`  | The minimum Priority Level an Entry must be to be accepted by this Endpoint | `All`
+`dateFormatter`        | `LXDateFormatter`  | The formatter to be used to convert an Entry's `dateTime` to a string | `.standardFormatter()`
+`entryFormatter`       | `LXEntryFormatter` | The formatter to be used to convert each Entry to a string | `.standardFormatter()`
 
-The maximum file size of each file in the rotation is specified by `maximumFileSizeKiB`, and is specified in kilobytes. Defaults to `1024` (one megabyte) if omitted.
+LogKit will write log entries to the files specified by `baseURL`, with each file's name automatically prepended with an index number indicating its place in the rotation. If the specified file cannot be opened, or if the index-prepended URL evaluates to `nil`, the initializer will fail.
 
-Log Entries may be filtered based on [Priority Level][levels] using `minimumPriorityLevel`. Only Entries of this level or above will be written to the Endpoint. If omitted, defaults to `All`.
+If omitted, the URL defaults to `{AppSupport}/{bundleID}/logs/{number}_log.txt`.
 
-The date formatter is specified by `dateFormatter`, and defaults to `LXDateFormatter.standardFormatter()` if omitted.
+As an example, if an `LXRotatingFileEndpoint` is initialized with its default parameter values, it will create a set of files in `Application Support/{bundleID}/logs/` named `1_log.txt`, `2_log.txt`, `3_log.txt`, `4_log.txt`, and `5_log.txt`.
 
-The Entry formatter is specified by `entryFormatter`, and defaults to `LXEntryFormatter = LXEntryFormatter.standardFormatter()` if omitted.
-
-Returns an initialized Rotating File Endpoint instance if successful, or `nil` if the file cannot be accessed.
+**Returns** an initialized Rotating File Endpoint instance if successful, or `nil` if the file cannot be accessed.
 
 
 {% include links.md doc_version=page.family %}
