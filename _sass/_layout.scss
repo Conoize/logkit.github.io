@@ -244,6 +244,7 @@
 
     h2 {
         font-size: 32px;
+        border-bottom: 2px solid $grey-color;
 
         @include media-query($on-laptop) {
             font-size: 28px;
