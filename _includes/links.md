@@ -79,6 +79,7 @@
 [epoch]: https://en.wikipedia.org/wiki/Unix_time "Unix Time"
 [statusCodes]: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes "HTTP Status Codes"
 [nsDateFormatter]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/index.html "NSDateFormatter Reference"
+[nsURLRequest]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html "NSURLRequest Reference"
 [nsURLSessionConfig]: https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSessionConfiguration_class/index.html#//apple_ref/occ/cl/NSURLSessionConfiguration "NSURLSessionConfiguration Reference"
 [autoclosures]: https://developer.apple.com/swift/blog/?id=4 "Swift Autoclosures"
 [swift-specials]: https://developer.apple.com/swift/blog/?id=15 "Swift Special Keywords"
