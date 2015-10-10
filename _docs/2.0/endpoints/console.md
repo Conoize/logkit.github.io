@@ -18,9 +18,8 @@ init(synchronous: minimumPriorityLevel: dateFormatter: entryFormatter: )
 
 **Parameters**
 
-Name                   | Type               | Description | Default
----------------------- | ------------------ | ----------- | --------
-`synchronous`          | `Bool`             | Specifies whether synchronous writing is desired | `true`
+---------------------- | ------------------------------------- | -----------
+`synchronous`          | _Type:_ `Bool` <br> _Default:_ `true` | Specifies whether synchronous writing is desired
 {% include docs/endpoints/common_params.md family=page.family %}
 
 If synchronous behavior is selected, the application will wait for each [Log Entry][entries] to be printed to the console before continuing execution. This behavior is very helpful when debugging, but may reduce performance compared to the asynchronous behavior.

@@ -18,10 +18,9 @@ init?(fileURL: shouldAppend: minimumPriorityLevel: dateFormatter: entryFormatter
 
 **Parameters**
 
-Name                   | Type               | Description | Default
----------------------- | ------------------ | ----------- | --------
-`fileURL`              | `NSURL?`           | The file to write Entries to | see below
-`shouldAppend`         | `Bool`             | Append to data currently in file, or clear and start over? | `true`
+---------------------- | ------------------------------------------ | -----------
+`fileURL`              | _Type:_ `NSURL?` <br> _Default:_ see below | The file to write [Entries][entries] to
+`shouldAppend`         | _Type:_ `Bool` <br> _Default:_ `true`      | Indicates whether the endpoint should continue appending [Log Entries][entries] to the end of the file, or clear it and start at the beginning
 {% include docs/endpoints/common_params.md family=page.family %}
 
 LogKit will write log entries to the file specified by `fileURL`. If the specified file cannot be opened, or if the URL evaluates to `nil`, the initializer will fail.

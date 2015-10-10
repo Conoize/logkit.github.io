@@ -18,11 +18,10 @@ init?(baseURL: numberOfFiles: maxFileSizeKiB: minimumPriorityLevel: dateFormatte
 
 **Parameters**
 
-Name                   | Type               | Description | Default
----------------------- | ------------------ | ----------- | --------
-`baseURL`              | `NSURL?`           | The URL used to build the rotating file set's file URLs; see description below | see below
-`numberOfFiles`        | `UInt`             | The number of files to be used in the rotation | `5`
-`maxFileSizeKiB`       | `UInt`             | The maximum file size of each file in the rotation, specified in kilobytes | `1024`
+---------------------- | ------------------------------------ | -----------
+`baseURL`        | _Type:_ `NSURL?` <br> _Default:_ see below | The URL used to build the rotating file set's file URLs; see description below
+`numberOfFiles`  | _Type:_ `UInt` <br> _Default:_ `5`         | The number of files to be used in the rotation
+`maxFileSizeKiB` | _Type:_ `UInt` <br> _Default:_ `1024`      | The maximum file size of each file in the rotation, specified in kilobytes
 {% include docs/endpoints/common_params.md family=page.family %}
 
 LogKit will write log entries to the files specified by `baseURL`, with each file's name automatically prepended with an index number indicating its place in the rotation. If the specified file cannot be opened, or if the index-prepended URL evaluates to `nil`, the initializer will fail.

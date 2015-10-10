@@ -18,9 +18,8 @@ init?(baseURL: minimumPriorityLevel: dateFormatter: entryFormatter: )
 
 **Parameters**
 
-Name                   | Type               | Description | Default
----------------------- | ------------------ | ----------- | --------
-`baseURL`              | `NSURL?`           | The URL used to build the date files' URLs; see description below | see below
+---------------------- | ------------------------------------------ | -----------
+`baseURL`              | _Type:_ `NSURL?` <br> _Default:_ see below | The URL used to build the date files' URLs; see description below
 {% include docs/endpoints/common_params.md family=page.family %}
 
 LogKit will write log entries to the files specified by `baseURL`, with each file’s name automatically prepended with a datestamp in the format `yyyy-MM-dd`. If the specified file cannot be opened, or if the datestamp-prepended URL evaluates to `nil`, the initializer will fail.
