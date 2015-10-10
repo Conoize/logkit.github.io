@@ -6,8 +6,6 @@ family: 2.0
 
 {% include docs/endpoints/rotating-file/overview.md family=page.family %}
 
-{% include docs/endpoints/synchronicity.md family=page.family endpoint_type="Rotating File" %}
-
 ## Usage
 
 ### Initialization
