@@ -24,7 +24,7 @@ init?(baseURL: numberOfFiles: maxFileSizeKiB: minimumPriorityLevel: dateFormatte
 `maxFileSizeKiB` | _Type:_ `UInt` <br> _Default:_ `1024`      | The maximum file size of each file in the rotation, specified in kilobytes
 {% include docs/endpoints/common_params.md family=page.family %}
 
-LogKit will write log entries to the files specified by `baseURL`, with each file's name automatically prepended with an index number indicating its place in the rotation. If the specified file cannot be opened, or if the index-prepended URL evaluates to `nil`, the initializer will fail.
+This [Endpoint][endpoints] writes [Log Entries][entries] to the files specified by `baseURL`, with each file's name automatically prepended with an index number indicating its place in the rotation. If the specified file cannot be opened, or if the index-prepended URL evaluates to `nil`, the initializer will fail.
 
 If omitted, the URL defaults to `{AppSupport}/{bundleID}/logs/{number}_log.txt`, where `{AppSupport}` is the system-determined Application Support directory, `{bundleID}` is the host application's `bundleIdentifier` string, and `{number}` is the index of the currently selected file.
 
