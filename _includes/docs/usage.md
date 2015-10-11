@@ -130,7 +130,7 @@ Because the Logger instance `log` is created as a global, you may now make loggi
 
 ## Advanced Usage
 
-The basics of LogKit don't change, but its real power comes from using [Endpoints][endpoints] other than the console. LogKit allows you to write log entries to as many Endpoints as desired. Each of these Endpoints can be customized to log in different [formats][formatting], or set to accept different [Priority Levels][levels].
+The basics of LogKit don't change, but its real power comes from using [Endpoints][endpoints] other than the console. LogKit allows you to write [Log Entries][entries] to as many Endpoints as desired. Each of these Endpoints can be customized to log in different [formats][formatting], or set to accept different [Priority Levels][levels].
 
 ### Complex Example (in OS X) with Multiple Endpoints
 
@@ -160,6 +160,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 This complex example initializes a [Logger][loggers] with several [Endpoints][endpoints]:
 
 * a {{ endpoint1_type }} that asynchronously outputs messages of all [Levels][levels], using a shortened time-only date format and a concise entry format.
-* a [File Endpoint][ep-file] that saves to a `logs` directory inside the User's Documents directory, only outputting entries of [Level][levels] `Notice` and above, using a very detailed entry format.
+* a [File Endpoint][ep-file] that saves to a `logs` directory inside the User's Documents directory, only outputting [Entries][entries] of [Level][levels] `Notice` and above, using a very detailed entry format.
 
 These are just two of several Endpoints that LogKit includes. See the [Endpoints documentation][endpoints] for other Endpoints that LogKit includes, and for information on creating your own Endpoints.

@@ -42,6 +42,8 @@
 {% comment %} === Documentation Anchor Links === {% endcomment %}
 [log-methods]:              {{ loggers | remove:' ' }}#logging-methods                  "Logger Methods"
 [json-formatting]:          {{ ep_http_json | remove:' ' }}#entry-formatting            "HTTP JSON Entry Formatting"
+[date-formatting]:          {{ formatting | remove:' ' }}#date-formatters               "Date Formatting"
+[entry-formatting]:         {{ formatting | remove:' ' }}#entry-formatters              "Entry Formatting"
 [default-formatting]:       {{ formatting | remove:' ' }}#default-formatters            "Default Formatters"
 [default-date-formatting]:  {{ formatting | remove:' ' }}#default-date-formatter        "Default Date Formatters"
 [default-entry-formatting]: {{ formatting | remove:' ' }}#default-entry-formatter       "Default Entry Formatters"
