@@ -40,13 +40,15 @@
 [formatting]:               {{ formatting }}                                "Formatting Reference"
 
 {% comment %} === Documentation Anchor Links === {% endcomment %}
-[log-methods]:              {{ loggers | remove:' ' }}#logging-methods                   "Logger Methods"
-[json-formatting]:          {{ ep_http_json | remove:' ' }}#entry-formatting             "HTTP JSON Entry Formatting"
-[default-formatting]:       {{ formatting | remove:' ' }}#default-formatters             "Default Formatters"
-[entries]:                  {{ formatting | remove:' ' }}#log-entries                    "Log Entry Reference"
-[custom-formatting]:        {{ formatting | remove:' ' }}#writing-formatters             "Writing Formatters"
-[user-info]:                {{ formatting | remove:' ' }}#customizing-entry-properties   "Customizing with userInfo"
+[log-methods]:              {{ loggers | remove:' ' }}#logging-methods                  "Logger Methods"
+[json-formatting]:          {{ ep_http_json | remove:' ' }}#entry-formatting            "HTTP JSON Entry Formatting"
+[default-formatting]:       {{ formatting | remove:' ' }}#default-formatters            "Default Formatters"
+[default-date-formatting]:  {{ formatting | remove:' ' }}#default-date-formatter        "Default Date Formatters"
+[default-entry-formatting]: {{ formatting | remove:' ' }}#default-entry-formatter       "Default Entry Formatters"
+[custom-formatting]:        {{ formatting | remove:' ' }}#writing-formatters            "Writing Custom Formatters"
+[custom-date-formatting]:   {{ formatting | remove:' ' }}#custom-date-formatters        "Custom Date Formatters"
 [custom-entry-formatting]:  {{ formatting | remove:' ' }}#custom-entry-formatters       "Custom Entry Formatters"
+[user-info]:                {{ formatting | remove:' ' }}#customizing-entry-properties  "Customizing with userInfo"
 
 {% comment %} === Main Page Links === {% endcomment %}
 [about]:                    /about/                                         "About LogKit"
@@ -79,6 +81,7 @@
 [cocoapods]: https://guides.cocoapods.org/using/using-cocoapods.html "Using CocoaPods"
 [carthage]: https://github.com/Carthage/Carthage "Carthage Project"
 [utc]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time "Coordinated Universal Time"
+[iso8601]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601"
 [epoch]: https://en.wikipedia.org/wiki/Unix_time "Unix Time"
 [statusCodes]: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes "HTTP Status Codes"
 [nsDateFormatter]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/index.html "NSDateFormatter Reference"

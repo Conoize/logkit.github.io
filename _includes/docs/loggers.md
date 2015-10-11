@@ -32,7 +32,7 @@ init(endpoints: [{{ endpoint_type }}?])
 convenience init()
 {% endhighlight %}
 
-**Returns** an initialized and ready Logger instance. This Logger instance is populated with a standard [Console Endpoint][ep-console], configured to write [Entries][entries] of all [Priority Levels][levels] with the [default date and entry formatters][default-formatting].
+**Returns** an initialized and ready Logger instance. This Logger instance is populated with a standard [Console Endpoint][ep-console], configured to write [Entries][entries] of all [Priority Levels][levels] with the [default date][default-date-formatting] and [Entry formatters][default-entry-formatting].
 
 
 ## Logging Methods
