@@ -100,6 +100,14 @@ a {
         color: $text-color;
         text-decoration: underline;
     }
+
+    pre, code {
+        text-decoration: underline;
+
+        &:hover {
+            color: $text-color;
+        }
+    }
 }
 
 
@@ -126,7 +134,8 @@ blockquote {
  */
 pre,
 code {
-    font-size: $small-font-size;
+    font-family: $code-font-family;
+    font-size: $code-font-size;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: $brand-color-back;
