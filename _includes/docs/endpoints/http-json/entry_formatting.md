@@ -9,7 +9,7 @@ The HTTP JSON Endpoint is hard-coded to include a special `entryFormatter` that 
 
 It is the application developer's duty to ensure that all [`userInfo`][entries] items are JSON-serializable if this [Endpoint][endpoints] is in use. A non-JSON-serializable item will cause the Log Entry to be skipped in a shipping application (though in a test build, the application will abort).
 
-Additionally, the HTTP JSON Endpoint includes the `LXDateFormatter.ISO8601DateTimeFormatter()` date formatter as its default `dateFormatter`. This is a different default than other [Endpoints][endpoints] include.
+Additionally, the HTTP JSON Endpoint includes the `LXDateFormatter.ISO8601DateTimeFormatter()` [date formatter][date-formatting] as its default `dateFormatter`. This is a different default than other [Endpoints][endpoints] include.
 
 Here is an example [Log Entry][entries] serialized to [JSON][json] (not all properties are shown for brevity):
 
