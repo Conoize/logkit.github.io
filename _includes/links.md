@@ -18,6 +18,7 @@
 {% capture ep_dated_file %}         {{ doc_path }}endpoints/dated-file/                             {% endcapture %}
 {% capture ep_http %}               {{ doc_path }}endpoints/http/                                   {% endcapture %}
 {% capture ep_http_json %}          {{ doc_path }}endpoints/http-json/                              {% endcapture %}
+{% capture entries %}               {{ doc_path }}entries/                                          {% endcapture %}
 {% capture levels %}                {{ doc_path }}priority-levels/                                  {% endcapture %}
 {% capture formatting %}            {{ doc_path }}formatting/                                       {% endcapture %}
 
@@ -34,6 +35,7 @@
 [ep-dated-file]:            {{ ep_dated_file }}                             "Dated File Endpoint Reference"
 [ep-http]:                  {{ ep_http }}                                   "HTTP Endpoint Reference"
 [ep-http-json]:             {{ ep_http_json }}                              "HTTP JSON Endpoint Reference"
+[entries]:                  {{ entries }}                                   "Log Entry Reference"
 [levels]:                   {{ levels }}                                    "Priority Level Reference"
 [formatting]:               {{ formatting }}                                "Formatting Reference"
 
@@ -44,6 +46,7 @@
 [entries]:                  {{ formatting | remove:' ' }}#log-entries                    "Log Entry Reference"
 [custom-formatting]:        {{ formatting | remove:' ' }}#writing-formatters             "Writing Formatters"
 [user-info]:                {{ formatting | remove:' ' }}#customizing-entry-properties   "Customizing with userInfo"
+[custom-entry-formatting]:  {{ formatting | remove:' ' }}#custom-entry-formatters       "Custom Entry Formatters"
 
 {% comment %} === Main Page Links === {% endcomment %}
 [about]:                    /about/                                         "About LogKit"
