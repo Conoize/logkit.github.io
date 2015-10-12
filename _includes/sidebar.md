@@ -12,6 +12,7 @@
   * [Dated File][ep-dated-file]
   * [HTTP][ep-http]
   * [HTTP JSON][ep-http-json]
+* [Log Entries][entries]
 * [Priority Levels][levels]
 * [Entry Formatting][formatting]
 {% when 2.0 %}
