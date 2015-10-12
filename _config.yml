@@ -2,7 +2,7 @@
 title: LogKit
 # email:
 description: >
-  An efficient logging library for OS X, iOS, and watchOS, written in Swift. Log to console, file, HTTP service,
+  An efficient logging library for OS X, iOS, and watchOS -- written in Swift. Log to console, file, HTTP service,
   or your own endpoint. Simple to get started, but smartly customizable.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.logkit.info" # the base hostname & protocol for your site
