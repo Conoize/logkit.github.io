@@ -22,7 +22,7 @@ init?(baseURL: minimumPriorityLevel: dateFormatter: entryFormatter: )
 `baseURL`              | _Type:_ `NSURL?` <br> _Default:_ see below | The URL used to build the date files' URLs; see description below
 {% include docs/endpoints/common_params.md family=page.family %}
 
-This [Endpoint][endpoints] writes [Log Entries][entries] to the files specified by `baseURL`, with each file’s name automatically prepended with a datestamp in the format `yyyy-MM-dd`. If the specified file cannot be opened, or if the datestamp-prepended URL evaluates to `nil`, the initializer will fail.
+This [Endpoint][endpoints] writes [Log Entries][entries] to the files specified by `baseURL`, with each file’s name automatically prepended with a datestamp in the format `yyyy-MM-dd`. If the specified file cannot be opened, or if the datestamp-prepended URL evaluates to `nil`, the initializer may fail.
 
 If omitted, the URL defaults to `{AppSupport}/{bundleID}/logs/{datestamp}_log.txt`, where `{AppSupport}` is the system-determined Application Support directory, `{bundleID}` is the host application’s `bundleIdentifier` string, and `{datestamp}` is the current date's datestamp.
 

@@ -1,7 +1,7 @@
 {% case include.family %}
 
 {% when 2.0 %}
-The `LXHTTPEndpoint` uploads [Log Entries][entries] to an HTTP service.
+The `LXHTTPEndpoint` uploads [Log Entries][entries] to an HTTP service in plaintext format.
 
 Upload and retry management are handled automatically by this [Endpoint][endpoints]. Log Entries that do not successfully upload will be queued for another attempt at a later time. Entries are persisted to disk until they are successfully uploaded, including between application runs, so that extended network outages do not cause Log Entries to be lost.
 
