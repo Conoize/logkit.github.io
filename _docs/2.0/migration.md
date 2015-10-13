@@ -98,13 +98,34 @@ LogKit 2 introduces some upgrades to the Log Entry [formatting][formatting] syst
 
 ### Date Formatting
 
-LogKit 2 introduces the `LXDateFormatter` object, replacing the `NSDateFormatter` previously used by Endpoints. `LXDateFormatter` is similar to `NSDateFormatter`, but is easier to initialize and includes a few built-in presets. All Endpoints now require the use of an `LXDateFormatter`. See the [formatting guide][date-formatting] for full details.
+LogKit 2 introduces the `LXDateFormatter` object, replacing the `NSDateFormatter` previously used by Endpoints. `LXDateFormatter` is similar to `NSDateFormatter`, but is easier to initialize and includes a few built-in presets. `LXDateFormatter` uses the same date format strings as `NSDateFormatter`, so transitioning is simple. All Endpoints now require the use of an `LXDateFormatter`. See the [formatting guide][date-formatting] for full details.
+
+{% highlight swift %}
+// LogKit 1
+let myDateFormatter: NSDateFormatter = {
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+    formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
+    return formatter
+}()
+
+// LogKit 2 - defaults to UTC time zone if omitted
+let myDateFormatter = LXDateFormatter(formatString: "yyyy-MM-dd HH:mm:ss.SSS", timeZone: NSTimeZone(forSecondsFromGMT: 0))
+{% endhighlight %}
 
 ### Entry Formatting
 
 LogKit 2 upgrades the closure previously used to format Log Entries to an object of its own. The `LXEntryFormatter` object accepts the same closures used in LogKit 1 as its initialization parameter. `LXEntryFormatter` now includes a few built-in presets as well. All Endpoints require the use of an `LXEntryFormatter`. See the [formatting guide][entry-formatting] for full details.
 
 Any custom formatters using the [Log Entry][entries] property `logLevel` should be updated to reflect that this property is now called `level`. In addition, several new properties have been made available, as described below.
+
+{% highlight swift %}
+// LogKit 1
+let myEntryFormatter: LXLogEntryFormatter = { entry in return "[\(entry.logLevel)] \(entry.message)" }
+
+// LogKit 2
+let myEntryFormatter = LXEntryFormatter({ entry in return "[\(entry.level)] \(entry.message)" })
+{% endhighlight %}
 
 
 ## Log Entry Details
