@@ -9,7 +9,7 @@ LogKit makes creating custom Entry formatters easy. The `LXLogEntryFormatter` cl
 typealias LXLogEntryFormatter = (entry: LXLogEntry) -> String
 {% endhighlight %}
 
-Defining an entry formatter is as simple as providing a closure that accepts a [Log Entry][entries] and returns a string.
+Creating an Entry formatter is as simple as providing a closure that accepts a [Log Entry][entries] and returns a string. The closure is free to use as many or as few of a [Log Entry's properties][entry-props] as the developer wishes.
 
 **Example:** The following creates a concise Entry formatter that outputs only a [Log Entry's][entries] `dateTime` and `message`:
 
@@ -36,7 +36,7 @@ init(_: )
 {% endhighlight %}
 {% comment %}_ This stops the editor from turning the rest of the document purple :( {% endcomment %}
 
-The initializer takes only one parameter - a closure of type `(LXLogEntry) -> String`. This closure must accept an `LXLogEntry` and return a `String`. The closure is free to use as many or as few of a Log Entry's properties as the developer wishes.
+The initializer takes only one parameter - a closure of type `(LXLogEntry) -> String`. This closure must accept an `LXLogEntry` and return a `String`. The closure is free to use as many or as few of a [Log Entry's properties][entry-props] as the developer wishes.
 
 **Returns** an initialized `LXEntryFormatter` instance.
 

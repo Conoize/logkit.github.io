@@ -15,7 +15,7 @@
 * [Log Entries][entries]
 * [Priority Levels][levels]
 * [Entry Formatting][formatting]
-{% when 2.0 %}
+{% else %}
 * [Installation][installation]
 * [Usage][usage]
 * [Loggers][loggers]

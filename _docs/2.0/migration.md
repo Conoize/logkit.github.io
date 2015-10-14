@@ -109,7 +109,7 @@ let myDateFormatter: NSDateFormatter = {
     return formatter
 }()
 
-// LogKit 2 - defaults to UTC time zone if omitted
+// LogKit 2 - defaults to UTC if timeZone: omitted
 let myDateFormatter = LXDateFormatter(formatString: "yyyy-MM-dd HH:mm:ss.SSS", timeZone: NSTimeZone(forSecondsFromGMT: 0))
 {% endhighlight %}
 

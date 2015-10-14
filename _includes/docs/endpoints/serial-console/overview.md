@@ -7,4 +7,5 @@ The `LXLogSerialConsoleEndpoint` writes [Log Entries][entries] to the console (`
 
 {% include docs/endpoints/synchronicity.md family=page.family endpoint_type="Serial Console" %}
 
+
 {% endcase %}
