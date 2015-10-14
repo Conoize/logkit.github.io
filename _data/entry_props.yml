@@ -1,0 +1,149 @@
+- name: logKitVersion
+  type: String
+  desc: The version of the LogKit framework that generated the Entry
+  avail: 1.0
+  deprc:
+
+- name: message
+  type: String
+  desc: The message provided during the logging call
+  avail: 1.0
+  deprc:
+
+- name: userInfo
+  type: '[String:AnyObject]'
+  desc: Additional values to be provided to each [Endpoint's][endpoints] `entryFormatter`; always present but may be empty; see [here][user-info] for using `userInfo`
+  avail: 1.0
+  deprc:
+
+- name: logLevel
+  type: String
+  desc: The name of the Log Entry's [Priority Level][levels]
+  avail: 1.0
+  deprc: 2.0
+
+- name: level
+  type: String
+  desc: The name of the Log Entry's [Priority Level][levels]
+  avail: 1.1
+  deprc:
+
+- name: timestamp
+  type: Double
+  desc: The number of seconds since the [Unix epoch][epoch]
+  avail: 1.0
+  deprc:
+
+- name: dateTime
+  type: String
+  desc: The timestamp as a string serialized by an [Endpoint's `dateFormatter`][date-formatting]
+  avail: 1.0
+  deprc:
+
+- name: functionName
+  type: String
+  desc: The name of the function from which the Log Entry was created
+  avail: 1.0
+  deprc:
+
+- name: fileName
+  type: String
+  desc: The name of the source file from which the Log Entry was created
+  avail: 1.0
+  deprc:
+
+- name: filePath
+  type: String
+  desc: The absolute path of the source file from which the Log Entry was created
+  avail: 1.0
+  deprc:
+
+- name: lineNumber
+  type: Int
+  desc: The line number within the source file from which the Log Entry was created
+  avail: 1.0
+  deprc:
+
+- name: columnNumber
+  type: Int
+  desc: The column number within the source file from which the Log Entry was created
+  avail: 1.0
+  deprc:
+
+- name: threadID
+  type: String
+  desc: The ID of the thread from which the Log Entry was created
+  avail: 1.0
+  deprc:
+
+- name: threadName
+  type: String
+  desc: The name of the thread from which the Log Entry was created
+  avail: 1.0
+  deprc:
+
+- name: isMainThread
+  type: Bool
+  desc: An indicator of whether the Log Entry was created on the main thread
+  avail: 1.0
+  deprc:
+
+- name: osVersionString
+  type: String
+  desc: A description of the operating system, including its name and version
+  avail: 2.0
+  deprc:
+
+- name: osMajorVersion
+  type: Int
+  desc: The major version number of the operating system
+  avail: 2.0
+  deprc:
+
+- name: osMinorVersion
+  type: Int
+  desc: The minor version number of the operating system
+  avail: 2.0
+  deprc:
+
+- name: osPatchVersion
+  type: Int
+  desc: The patch version number of the operating system
+  avail: 2.0
+  deprc:
+
+- name: osBuildVersion
+  type: String
+  desc: The build version string of the operating system
+  avail: 2.0
+  deprc:
+
+- name: bundleID
+  type: String
+  desc: The bundle ID of the host application
+  avail: 2.0
+  deprc:
+
+- name: deviceModel
+  type: String
+  desc: The model of the device running the application
+  avail: 2.0
+  deprc:
+
+- name: deviceType
+  type: String
+  desc: The type of the device running the application
+  avail: 2.0
+  deprc:
+
+- name: deviceVendorID
+  type: String
+  desc: The vendor ID of the device running the application (if available)
+  avail: 2.0
+  deprc:
+
+- name: deviceAdvertisingID
+  type: String
+  desc: The advertising ID of the device running the application (if available)
+  avail: 2.0
+  deprc:
