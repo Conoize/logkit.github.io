@@ -9,7 +9,7 @@ LogKit 2.0.1 is a bugfix update. Developers using the HTTP JSON Endpoint are enc
 
 This release also contains substantial updates to the source code documentation. This documentation is better formatted, more accurate, and more comparable to this website's documentation.
 
-[The release notes can be found here.][gh-release]
+[The release notes can be found here.][gh-release-2_0_1]
 
 
 {% include links.md doc_version=2.0 %}

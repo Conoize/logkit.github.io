@@ -7,4 +7,4 @@ author: Justin Pawela
 
 LogKit 1.0.4 is an OS X 10.9 and iOS 7 bugfix update. No API changes have been made in this release.
 
-[The release notes can be found here.](https://github.com/logkit/logkit/releases/tag/1.0.4)
+[The release notes can be found here.][gh-release-1_0_4]

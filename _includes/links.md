@@ -75,7 +75,14 @@
 [gh-release]:               {{ site.releases | where:'family',family | map:'release_link' }}    "LogKit {{ family }} Release"
 [changelog]:                {{ site.releases | where:'family',family | map:'changelog_link' }}  "LogKit {{ family }} ChangeLog"
 [cocoadocs]:                {{ site.releases | where:'family',family | map:'cocoadocs_link' }}  "LogKit at CocoaDocs"
-
+{% for release in site.releases %}
+{% assign patch = release.latest_version | split:"." | last %}
+{% assign family_name = release.family | replace:".","_" %}
+{% for i in (0..patch) %}
+{% capture release_version %}{{ release.family }}.{{ i }}{% endcapture %}
+[gh-release-{{ family_name }}_{{ i }}]: https://github.com/logkit/logkit/releases/tag/{{ release_version }} "LogKit {{ release_version }} Release"
+{% endfor %}
+{% endfor %}
 
 {% comment %} === Static External Links === {% endcomment %}
 [install-cocoapods]: https://guides.cocoapods.org/using/getting-started.html "Getting Started with CocoaPods"

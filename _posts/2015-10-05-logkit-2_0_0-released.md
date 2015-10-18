@@ -12,7 +12,7 @@ Upgrading to LogKit 2 is easy, although it will require some minor changes in yo
 Finally, although development has moved to Swift 2, there may still be some developers using Xcode 6 with Swift 1.2. LogKit 1.1.0 is now available, and it is mostly a forward-compatibility release. Several (but not all) of the name changes that LogKit 2 brings have been brought to 1.1.0, with the intention of allowing developers to upgrade more gradually. LogKit 1.0.x users can upgrade to 1.1.0 without fear, as all changes have been made with backward-compatibility in mind; existing code will continue to work as it does currently. Please read the [LogKit 1.1.0 release announcement][local-1_1_0-announcement] for more information.
 
 
-[The release notes can be found here.][gh-release]
+[The release notes can be found here.][gh-release-2_0_0]
 
 
 [local-1_1_0-announcement]: /2015/10/04/logkit-1_1_0-released/
