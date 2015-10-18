@@ -3,12 +3,9 @@ layout: page
 title: Releases
 ---
 
-{% for release in site.releases reversed %}
+Below is a list of LogKit releases, complete with compatibility information and links for downloads and documentation.
 
-**LogKit {{ release.family }}** -- Latest: {{ release.latest_version }} -- [Download]({{ release.download_link }}) -- [Documentation]({{ release.docs_path }})
-
-{% if forloop.last != true %}
-***
-{% endif %}
-
-{% endfor %}
+{% for release in site.releases reversed %}{% if forloop.first %}
+Release | Latest | Xcode | Swift | Download | Documentation
+:------ | -----: | ----: | ----: | :------: | :-----------:{% endif %}
+LogKit **{{ release.family }}** | {{ release.latest_version }} | {{ release.xcode_version }} | {{ release.swift_version }} | [GitHub]({{ release.release_link }}) | [{{ release.family }} Docs]({{ release.docs_path }}){% endfor %}
