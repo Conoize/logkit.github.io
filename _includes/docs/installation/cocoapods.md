@@ -13,10 +13,23 @@ pod 'LogKit', '~> {{ include.family }}'
 For more information on using CocoaPods, read the [guide][cocoapods].
 
 
-{% else %}
+{% when 2.0 %}
 
 
 [CocoaPods][install-cocoapods] version 0.38 or higher is required. Include LogKit in your Podfile:
+
+{% highlight ruby %}
+use_frameworks!
+pod 'LogKit', '~> {{ include.family }}'
+{% endhighlight %}
+
+For more information on using CocoaPods, read the [guide][cocoapods].
+
+
+{% else %}
+
+
+[CocoaPods][install-cocoapods] version 0.39 or higher is required. Include LogKit in your Podfile:
 
 {% highlight ruby %}
 use_frameworks!

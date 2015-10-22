@@ -69,6 +69,7 @@
 [img-installation3]:        {{ static_images_path }}installation3.png
 [img-installation3v2]:      {{ static_images_path }}installation3v2.png
 [img-installation3v3]:      {{ static_images_path }}installation3v3.png
+[img-installation3v4]:      {{ static_images_path }}installation3v4.png
 
 
 {% comment %} === Dynamic External Links === {% endcomment %}

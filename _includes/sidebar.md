@@ -32,8 +32,8 @@
 {% endcase %}
 
 ***
-{% case include.version %}
-{% when 2.0 %}* [Migrating][migration]{% endcase %}
+{% case include.version %}{% when 1.0 or 1.1 %}
+{% else %}* [Migrating][migration]{% endcase %}
 * [ChangeLog][changelog]
 * [CocoaDocs][cocoadocs]
 
