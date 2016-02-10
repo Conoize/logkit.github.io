@@ -7,7 +7,7 @@
 > * OS X 10.9 or greater
 > * Xcode 6.3 or 6.4 with Swift 1.2
 >
-> Note: For Xcode 7 and Swift 2 compatibility, please check out [LogKit 2][docs-2_1].
+> Note: For Xcode 7 and Swift 2 compatibility, please check out [LogKit 2][docs-2_2].
 
 
 {% when 2.0 %}
