@@ -1,6 +1,6 @@
 {% case include.family %}
 
-{% else %}
+{% when 1.0 or 1.1 %}
 
 
 The following initializers are available for `LXLogSerialConsoleEndpoint`:

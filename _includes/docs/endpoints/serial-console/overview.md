@@ -1,6 +1,6 @@
 {% case include.family %}
 
-{% else %}
+{% when 1.0 or 1.1 %}
 
 
 The `LXLogSerialConsoleEndpoint` writes [Log Entries][entries] to the console (`stdout`) asynchronously.
