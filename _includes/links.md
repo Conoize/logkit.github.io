@@ -42,7 +42,9 @@
 {% comment %} === Documentation Anchor Links === {% endcomment %}
 [log-methods]:              {{ loggers | remove:' ' }}#logging-methods                  "Logger Methods"
 [entry-props]:              {{ entries | remove:' ' }}#log-entry-properties             "Log Entry Properties"
+[manual-rotation]:          {{ ep-rotating-file | remove:' ' }}#manual-rotation         "Manual Log File Rotation"
 [json-formatting]:          {{ ep_http_json | remove:' ' }}#entry-formatting            "HTTP JSON Entry Formatting"
+[advertising-id]:           {{ entries | remove:' ' }}#advertising-id                   "Advertising ID Property"
 [date-formatting]:          {{ formatting | remove:' ' }}#date-formatters               "Date Formatting"
 [entry-formatting]:         {{ formatting | remove:' ' }}#entry-formatters              "Entry Formatting"
 [default-date-formatting]:  {{ formatting | remove:' ' }}#default-date-formatter        "Default Date Formatters"
@@ -70,6 +72,8 @@
 [img-installation3v2]:      {{ static_images_path }}installation3v2.png
 [img-installation3v3]:      {{ static_images_path }}installation3v3.png
 [img-installation3v4]:      {{ static_images_path }}installation3v4.png
+[img-ad-id-enable-embedded]:{{ static_images_path }}ad-id_flag_embedded.png
+[img-ad-id-enable-cocoapods]:{{ static_images_path }}ad-id_flag_cocoapods.png
 
 
 {% comment %} === Dynamic External Links === {% endcomment %}
@@ -98,5 +102,6 @@
 [nsURLSessionConfig]: https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSessionConfiguration_class/index.html#//apple_ref/occ/cl/NSURLSessionConfiguration "NSURLSessionConfiguration Reference"
 [autoclosures]: https://developer.apple.com/swift/blog/?id=4 "Swift Autoclosures"
 [swift-specials]: https://developer.apple.com/swift/blog/?id=15 "Swift Special Keywords"
+[IDFA]: https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html#//apple_ref/doc/uid/TP40011225-CH33-SW8 "The Advertising Identifier"
 [json]: https://en.wikipedia.org/wiki/JSON "JSON"
 [cocoadocs-latest]: http://cocoadocs.org/docsets/LogKit "LogKit Reference"

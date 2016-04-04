@@ -8,7 +8,7 @@
 
 {% if include.family == 2.2 %}***New in 2.2***{% endif %}
 
-`LXRotatingFileEndpoint` instances will post notifications before and after they automatically rotate log files.
+`LXRotatingFileEndpoint` instances will post notifications before and after they rotate log files.
 
 Before rotating files, the instance will post a `LXFileEndpointWillRotateFilesNotification` notification. The notification's `object` is the actual Endpoint instance that is rotating files. The `userInfo` dictionary contains the current and next URLs, at the `LXFileEndpointRotationCurrentURLKey` and `LXFileEndpointRotationNextURLKey` keys, respectively.
 
@@ -17,6 +17,5 @@ After rotating files, the instance will post a `LXFileEndpointDidRotateFilesNoti
 All notifications are posted to the default notification center.
 
 > Note: Developers should **not** modify the log file currently in use by the Endpoint.
-
 
 {% endcase %}
